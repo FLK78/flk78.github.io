@@ -1,7 +1,27 @@
 <head>
-    {% include meta.html %}
-    <title>{{site.title}}</title>
-    <link rel="stylesheet" href="{% if site.baseurl %}{{site.baseurl}}{% else %}{% endif %}/assets/css/style.css">
-    <script src="https://kit.fontawesome.com/6a97161b76.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="{% if site.favicon-url %}{{site.favicon-url}}{% else %}{{ 'assets/images/logo.png' | absolute_url }}{% endif %}" type="image/x-icon">
+  {% include meta.html %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}{% if page.title %} | {{ page.title }}{% endif %}</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  <!-- Font Awesome -->
+  <script defer src="https://kit.fontawesome.com/6a97161b76.js" crossorigin="anonymous"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{{ site.favicon-url | default: '/assets/images/logo.png' | relative_url }}" type="image/png">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="{{ site.description }}">
+  <meta name="keywords" content="{{ site.site-keywords | default: 'Jekyll, Theme, CloudCannon' }}">
+  <meta name="author" content="{{ site.author-name | default: site.title }}">
+
+  <!-- Open Graph for social previews -->
+  <meta property="og:title" content="{{ site.title }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:image" content="{{ site.site-image | relative_url }}">
+  <meta property="og:url" content="{{ site.url }}">
+  <meta name="twitter:card" content="summary_large_image">
 </head>

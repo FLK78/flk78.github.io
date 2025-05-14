@@ -1,3 +1,4 @@
+ENV['BUNDLE_PATH'] = '/usr/local/bundle'
 ENV['BUNDLE_PATH__SYSTEM'] = 'true'
 
 source "https://rubygems.org"
