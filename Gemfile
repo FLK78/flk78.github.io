@@ -1,4 +1,4 @@
-ENV['BUNDLE_PATH'] = '.bundle/gems'
+ENV['BUNDLE_PATH__SYSTEM'] = 'true'
 
 source "https://rubygems.org"
 
