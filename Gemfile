@@ -1,4 +1,5 @@
 ENV['BUNDLE_PATH'] = '.bundle/gems'
+
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.3.2"
