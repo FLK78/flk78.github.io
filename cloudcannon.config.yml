@@ -3,10 +3,13 @@ build:
   bundler_version: 2.4.22
   post_install_commands:
     - rm -rf .bundle_cache
+
 _schema: _schema
+
 paths:
   uploads: uploads
   static: ''
+
 collections_config:
   pages:
     path: ''
@@ -80,9 +83,12 @@ collections_config:
     disable_add: true
     disable_add_folder: true
     disable_file_actions: true
+
 _snippets_imports:
   jekyll: true
+
 timezone: America/New_York
+
 markdown:
   engine: kramdown
   options:
